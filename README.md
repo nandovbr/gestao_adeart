@@ -10,4 +10,8 @@ Alguns conceitos importantes sobre essa aplicação:
 
 Utilizado `npx create-react-app "nome-da-pasta-usada"`, `npm install react-icons` e `npm install styled-components`
 Essa é a base. Necessário editar a estilização e adição de logo caso necessário
-para cada tipo de cliente que solicitar essa aplicação de controle financeiro.
+para cada tipo de usuário que solicitar essa aplicação.
+
+A aplicação salva as informações financeiras no `localStorage`. É possível que seja necessário o
+desenvolvimento do Backend dependendo das necessidades dos usuáros. Essa base possui
+apenas o Frontend básico.
