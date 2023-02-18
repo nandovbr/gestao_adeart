@@ -6,6 +6,8 @@ Este repositório é a base da aplicação e estilização em React JS para cont
 
 Alguns conceitos importantes sobre essa aplicação:
 
+Vídeo do youtube onde foi baseada a aplicação: https://www.youtube.com/watch?v=pj4vA67olbU&t=45s
+
 ### `Stacks e aplicabilidade`
 
 Utilizado `npx create-react-app "nome-da-pasta-usada"`, `npm install react-icons` e `npm install styled-components`
