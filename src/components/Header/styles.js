@@ -3,7 +3,23 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 150px;
   text-align: center;
-  background: teal;
+  background: linear-gradient(45deg, #37620C, #4F8B14, #68B81A, #4F8B14, #37620C);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+  font-family: 'Candara', sans-serif;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 `;
 
 export const Header = styled.h1``;
