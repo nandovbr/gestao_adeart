@@ -13,7 +13,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
     if (!desc || !amount) {
       alert("Informe a descrição e o valor!");
       return;
-    } else if (amount < 1) {
+    } else if (amount < 0) {
       alert("O valor tem que ser positivo!");
       return;
     }
