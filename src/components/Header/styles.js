@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 150px;
   text-align: center;
-  background: linear-gradient(45deg, #37620C, #4F8B14, #68B81A, #4F8B14, #37620C);
+  background: linear-gradient(45deg, #37620C, #68B81A, #87E12E, #68B81A, #37620C);
   background-size: 400% 400%;
   animation: gradient 12s ease infinite;
   font-family: 'Candara', sans-serif;
