@@ -13,13 +13,17 @@ const Grid = ({ itens, setItens }) => {
     <C.Table>
       <C.Thead>
         <C.Tr>
-          <C.Th width={25}>Nome</C.Th>
-          <C.Th width={40}>Serviço</C.Th>
-          <C.Th width={15}>Valor</C.Th>
-          <C.Th width={10} alignCenter>
+          <C.Th width={5}>id</C.Th>
+          <C.Th width={10}>Nome</C.Th>
+          <C.Th width={30}>Serviço</C.Th>
+          <C.Th width={8}>Valor</C.Th>
+          <C.Th width={10}>Celular</C.Th>
+          <C.Th width={10}>CPF</C.Th>
+          <C.Th width={20}>Endereço</C.Th>
+          <C.Th width={2} alignCenter>
             Tipo
           </C.Th>
-          <C.Th width={10}></C.Th>
+          <C.Th width={5}></C.Th>
         </C.Tr>
       </C.Thead>
       <C.Tbody>

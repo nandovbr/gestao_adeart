@@ -6,12 +6,15 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
   const [amount, setAmount] = useState("");
+  const [celu, setCelu] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [ende, setEnde] = useState("");
   const [isExpense, setExpense] = useState(false);
 
   const generateID = () => Math.round(Math.random() * 1000);
 
   const handleSave = () => {
-    if (!desc || !amount || !name) {
+    if (!desc || !amount || !name || !celu) {
       alert("Informe a descrição e o valor!");
       return;
     } else if (amount < 0) {
@@ -24,13 +27,19 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
       name: name,
       desc: desc,
       amount: amount,
+      celu: celu,
+      cpf: cpf,
+      ende: ende,
       expense: isExpense,
     };
 
     handleAdd(transaction);
 
+    setCelu("");
     setName("");
     setDesc("");
+    setCpf("");
+    setEnde("");
     setAmount("");
   };
 
@@ -52,6 +61,26 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
             type="number"
             onChange={(e) => setAmount(e.target.value)}
           />
+        </C.InputContent>
+        <C.InputContent>
+          <C.Label>Celular</C.Label>
+          <C.Input
+            value={celu}
+            onChange={(e) => setCelu(e.target.value)}
+            type="number"
+          />
+        </C.InputContent>
+        <C.InputContent>
+          <C.Label>CPF</C.Label>
+          <C.Input
+            value={cpf}
+            onChange={(e) => setCpf(e.target.value)}
+            type="number"
+          />
+        </C.InputContent>
+        <C.InputContent>
+          <C.Label>Endereço</C.Label>
+          <C.Input value={ende} onChange={(e) => setEnde(e.target.value)} />
         </C.InputContent>
         <C.RadioGroup>
           <C.Input

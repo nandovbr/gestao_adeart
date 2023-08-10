@@ -9,9 +9,13 @@ import {
 const GridItem = ({ item, onDelete }) => {
   return (
     <C.Tr>
+      <C.Td>{item.id}</C.Td>
       <C.Td>{item.name}</C.Td>
       <C.Td>{item.desc}</C.Td>
       <C.Td>{item.amount}</C.Td>
+      <C.Td>{item.celu}</C.Td>
+      <C.Td>{item.cpf}</C.Td>
+      <C.Td>{item.ende}</C.Td>
       <C.Td alignCenter>
         {item.expense ? (
           <FaRegArrowAltCircleDown color="red" />
