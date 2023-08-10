@@ -3,6 +3,7 @@ import Grid from "../Grid";
 import * as C from "./styles";
 
 const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
+  const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
   const [amount, setAmount] = useState("");
   const [isExpense, setExpense] = useState(false);
@@ -10,7 +11,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
   const generateID = () => Math.round(Math.random() * 1000);
 
   const handleSave = () => {
-    if (!desc || !amount) {
+    if (!desc || !amount || !name) {
       alert("Informe a descrição e o valor!");
       return;
     } else if (amount < 0) {
@@ -20,6 +21,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
 
     const transaction = {
       id: generateID(),
+      name: name,
       desc: desc,
       amount: amount,
       expense: isExpense,
@@ -27,6 +29,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
 
     handleAdd(transaction);
 
+    setName("");
     setDesc("");
     setAmount("");
   };
@@ -34,8 +37,12 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
   return (
     <>
       <C.Container>
+      <C.InputContent>
+          <C.Label>Nome</C.Label>
+          <C.Input value={name} onChange={(e) => setName(e.target.value)} />
+        </C.InputContent>
         <C.InputContent>
-          <C.Label>Descrição</C.Label>
+          <C.Label>Serviço</C.Label>
           <C.Input value={desc} onChange={(e) => setDesc(e.target.value)} />
         </C.InputContent>
         <C.InputContent>
