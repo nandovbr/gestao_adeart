@@ -1,7 +1,7 @@
 # Base principal da aplicação de controle financeiro
 
-Este repositório é a base da aplicação e estilização em React JS para gestão financeira da Adeart.
+Este repositório é a base da aplicação e estilização em React JS para gestão financeira.
 
 ## Conceitos importantes
 
-Apenas modelo. A versão completa será privada.
+Apenas modelo base.
